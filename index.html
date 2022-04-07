@@ -14,74 +14,75 @@
     <!-- Font Poppins -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Calculator Apps</title>
   </head>
     <div class="container-fluid h-100 p-5" style="background-color: #e8e8e8;">  
         <div class="calculator card bgc-black mx-auto">
         
-            <input type="text" class="calculator-screen z-depth-1 bgc-black calc-screen" value="" disabled />
-            <input type="text" class="calculator-screen z-depth-1 bgc-black num-screen" value="" disabled />
+            <input type="text" class="calculator-screen z-depth-1 bgc-black calc-screen" id="calcscreen" value="" disabled />
+            <input type="text" class="calculator-screen z-depth-1 bgc-black num-screen" id="numberscreen" value="" disabled />
             <div class="card number-pad">
                 <div class="calculator-keys row">
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-aqua w-100 btn-sm" value="">AC</button>
+                        <button type="button" id="c" class="btn-custom c-aqua w-100  numbers">AC</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-aqua w-100 btn-sm" value="">+/-</button>
+                        <button type="button" id="±" class="btn-custom c-aqua w-100 numbers">+/-</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-aqua w-100 btn-sm  " value="">%</button>
+                        <button type="button" func="%" class="btn-custom c-aqua w-100  operator">%</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-red w-100  " value="/">&divide;</button>
+                        <button type="button" func="/" class="btn-custom c-red w-100 operator">&divide;</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="7" class="btn c-white w-100 waves-effect">7</button>
+                        <button type="button" func="7" class="btn-custom c-white w-100  numbers">7</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="8" class="btn c-white w-100 waves-effect">8</button>
+                        <button type="button" func="8" class="btn-custom c-white w-100  numbers">8</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="9" class="btn c-white w-100 waves-effect">9</button>
+                        <button type="button" func="9" class="btn-custom c-white w-100  numbers">9</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-red w-100" value="*">&times;</button>
+                        <button type="button" func="*" class="btn-custom c-red w-100 operator">&times;</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="4" class="btn c-white w-100 waves-effect">4</button>
+                        <button type="button" func="4" class="btn-custom c-white w-100  numbers">4</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="5" class="btn c-white w-100 waves-effect">5</button>
+                        <button type="button" func="5" class="btn-custom c-white w-100  numbers">5</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="6" class="btn c-white w-100 waves-effect">6</button>
+                        <button type="button" func="6" class="btn-custom c-white w-100  numbers">6</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-red w-100 " value="-">-</button>
+                        <button type="button" func="-" class="btn-custom c-red w-100 operator">-</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="1" class="btn c-white w-100 waves-effect">1</button>
+                        <button type="button" func="1" class="btn-custom c-white w-100  numbers">1</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="2" class="btn c-white w-100 waves-effect">2</button>
+                        <button type="button" func="2" class="btn-custom c-white w-100  numbers">2</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="3" class="btn c-white w-100 waves-effect">3</button>
+                        <button type="button" func="3" class="btn-custom c-white w-100  numbers">3</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="btn c-red w-100" value="+">+</button>
+                        <button type="button" func="+" class="btn-custom c-red w-100 operator">+</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="0" class="btn c-white waves-effect w-100">RES</button>
+                        <button type="button" id="ce" class="btn-custom c-white  w-100 numbers">C</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="0" class="btn c-white waves-effect w-100">0</button>
+                        <button type="button" func="0" class="btn-custom c-white  w-100 numbers">0</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" class="decimal btn c-white w-100" value=".">.</button>
+                        <button type="button" func="." class="btn-custom c-white w-100 numbers">.</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" value="0" class="btn c-red waves-effect w-100">=</button>
+                        <button type="button" func="=" id="equals" class="btn-custom c-red  w-100">=</button>
                     </div>
                 </div>
             </div>

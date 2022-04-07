@@ -62,3 +62,7 @@ html {
   .number-pad button{
     background-color: #272b33;
   }
+  .btn-custom{
+    text-decoration: none;
+    border: none;
+  }
