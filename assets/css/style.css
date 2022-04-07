@@ -1,7 +1,6 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    background-color: #e8e8e8;
 }
 
   *,
@@ -18,13 +17,15 @@ html {
   .c-white{
     color:#fff;
   }
+  .c-aqua{
+    color: #26fed6;
+  }
+  .c-red{
+    color:#ec6666;
+  }
   .calculator {
     border-radius: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
+    width: 300px;
     padding-top: 40px;
   }
 
@@ -42,19 +43,16 @@ html {
     font-size: 4rem;
   }
   
-
   button {
-    height: 60px;
-    font-size: 2rem!important;
-  }
-
-  .equal-sign {
-    height: 98%;
-    grid-area: 2 / 4 / 6 / 5;
+    height: 50px;
+    font-size: 1.8rem!important;
   }
 
   .calculator-keys {
-    padding: 20px;
+    padding: 10px 20px;
+  }
+  .calculator-keys div button {
+    border-radius: 25%;
   }
   .number-pad{
       border-radius: 10% 10% 30px 30px;
