@@ -14,18 +14,25 @@
     <!-- Font Poppins -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css ">
     <title>Calculator Apps</title>
   </head>
     <div class="container-fluid h-100 p-5" style="background-color: #e8e8e8;">  
         <div class="calculator card bgc-black mx-auto">
-        
+            <div class="mx-auto mb-4">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <img src="assets/img/light-mode.png" width="15px" alt="">
+                    <img src="assets/img/night-mode.png" width="15px" alt="">
+                    <div class="ball"></div>
+                </label>
+            </div>
             <input type="text" class="calculator-screen z-depth-1 bgc-black calc-screen" id="calcscreen" value="" disabled />
             <input type="text" class="calculator-screen z-depth-1 bgc-black num-screen" id="numberscreen" value="" disabled />
             <div class="card number-pad">
                 <div class="calculator-keys row">
                     <div class="col-3 p-3 text-center">
-                        <button type="button" id="c" class="btn-custom c-aqua w-100  numbers">AC</button>
+                        <button type="button" id="c" class="btn-custom c-aqua w-100 numbers ">AC</button>
                     </div>
                     <div class="col-3 p-3 text-center">
                         <button type="button" id="±" class="btn-custom c-aqua w-100 numbers">+/-</button>
@@ -37,7 +44,7 @@
                         <button type="button" func="/" class="btn-custom c-red w-100 operator">&divide;</button>
                     </div>
                     <div class="col-3 p-3 text-center">
-                        <button type="button" func="7" class="btn-custom c-white w-100  numbers">7</button>
+                        <button type="button" func="7" class="btn-custom c-white w-100 numbers">7</button>
                     </div>
                     <div class="col-3 p-3 text-center">
                         <button type="button" func="8" class="btn-custom c-white w-100  numbers">8</button>
@@ -86,7 +93,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
         </div>
 
     <!-- Main Javascript -->

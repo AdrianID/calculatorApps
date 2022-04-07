@@ -6,6 +6,7 @@ var equals     = document.getElementById( "equals" );
 var c 		   = document.getElementById( "c" );
 var ce  	   = document.getElementById( "ce" );
 var plusMinus  = document.getElementById( "±" );
+var checkbox = document.getElementById("checkbox");
 
 var total = 0,
     currCalc = "",
@@ -16,7 +17,7 @@ var total = 0,
     addDecimal = true,
     decimalCounter = 0;
 
-for ( var i = 0; i < numbers.length; i++ ) {
+    for ( var i = 0; i < numbers.length; i++ ) {
   numbers[i].onclick = numberPressed;  
 }
 
@@ -29,7 +30,6 @@ c.onclick = clearAll;
 ce.onclick = clearCurrNumber;
 plusMinus.onclick = togglePlusMinus;
 
-
 function numberPressed() {
 
   var currVal = this.getAttribute( "func" );
@@ -39,7 +39,6 @@ function numberPressed() {
     stringNum += ( "." + currVal )
     currNumber = parseFloat( stringNum );
     console.log(stringNum);
-    // Stops other decimals being added to currNumber
     prevDecimal = false;
     
   } else {
@@ -125,11 +124,6 @@ function togglePlusMinus() {
   }
 }
 
-// Universal functions
-// ______________________________________________
-
-
-// Object that includes all operators on calclator
 var findSum = {
   "+": function(a, b) { return a + b },
   "-": function(a, b) { return a - b },
@@ -139,14 +133,14 @@ var findSum = {
 };
 
 function resetValues() {
-  // Reset current calc and current number
   currCalc = "";
   currNumber = "";
-  // Reset calc screen
   calcScreen.value   =  currCalc;
-  // Show total in numberScreen
   numberScreen.value = total; 
   prevOperator = undefined;
   addDecimal = true;
 }
 
+checkbox.addEventListener('change',()=>{
+    document.body.classList.toggle("darkMode");
+});
